@@ -1,13 +1,9 @@
 /*
- * Copyright (c) 2010, Oracle and/or its affiliates. All rights reserved.
- *
- * You may not modify, use, reproduce, or distribute this software
- * except in compliance with the terms of the license at:
- * http://developer.sun.com/berkeley_license.html
- *
- * author: tgiunipero
- * description: Style rules for the AffableBean application
- */
+Document   : affablebean
+Created on : Jun 9, 2010, 3:59:32 PM
+Author     : tgiunipero
+Description: Style rules for the AffableBean application
+*/
 
 
 /* html tags */
@@ -49,12 +45,6 @@ li { margin: 10px 0 }
 
 label { line-height: 30px }
 
-label.error {
-    font-size: smaller;
-    line-height: 20px;
-    font-style: italic;
-}
-
 
 /* general styles */
 #main { background: #f7f7e9 }
@@ -73,8 +63,6 @@ label.error {
     background-color: #f5eabe;
     padding: 5px;
     color: inherit;
-    display: inline;
-    border-radius: 4px;
 }
 
 .hMargin { margin: 0 30px }
@@ -86,16 +74,6 @@ label.error {
 .header {
     background-color: #c3e3e0;
     height: 30px;
-}
-
-.error {
-    color: #c00;
-    font-style: italic;
-}
-
-.tableHeading {
-    font-weight: bold;
-    background-color: #edf8f7;
 }
 
 
@@ -194,9 +172,6 @@ label.error {
     float: inherit;
 }
 
-/* Safari - disables underline for category boxes on index page */
-.categoryBox a { text-decoration: none }
-
 .categoryLabel {
     position: absolute;
     background-color: #fff;
@@ -238,7 +213,6 @@ label.error {
     padding: 13px;
     display: block;
     background-color: #d3ede8;
-    border-radius: 4px;
 }
 
 #selectedCategory {
@@ -248,13 +222,11 @@ label.error {
 }
 
 #categoryTitle {
-    margin-top: -40px;
-    right: 385px;
+    margin: -34px 180px 0 0;
     font-size: x-large;
-    position: absolute;
+    float: right;
     background-color: #f5eabe;
     padding: 7px;
-    border-radius: 4px;
 }
 
 .categoryText {
@@ -262,13 +234,7 @@ label.error {
     font-size: x-large;
 }
 
-#productTable {
-    width: 600px;
-
-    /* styles to collaborate with rounded categoryLabel */
-    position: relative;
-    z-index: 1;
-}
+#productTable { width: 600px }
 
 #productTable tr { height: 90px }
 
@@ -298,7 +264,6 @@ label.error {
     padding: 10px;
     background-color: #f5eabe;
     float: left;
-    border-radius: 4px;
 }
 
 #checkoutTable td {
@@ -315,7 +280,6 @@ label.error {
     padding: 10px;
     border: 1px solid #c3e3e0;
     background-color: #c3e3e0;
-    border-radius: 4px;
 }
 
 #priceBox td {
@@ -330,8 +294,6 @@ label.error {
 
 .total { border-top: 1px solid #444 }
 
-.indent { margin-left: 6em }
-
 
 /* confirmation page styles */
 #confirmationText {
@@ -339,7 +301,7 @@ label.error {
     padding: 10px;
     background-color: #f5eabe;
     float: left;
-    border-radius: 4px;
+    width:540px;
 }
 
 .summaryColumn {
@@ -348,99 +310,15 @@ label.error {
     float: left;
 }
 
-.detailsTable { text-align: left }
-
-.detailsTable th { padding: 5px 10px }
-
-.detailsTable td {
-    padding: 5px 10px 5px 20px;
-    font-size: small;
-    font-family: "Courier New", courier, monospace;
+#orderSummaryTable {
+    width: 100%;
+    text-align: left;
+    height: 200px;
 }
-
-#orderSummaryTable { width: 100% }
 
 #deliveryAddressTable {
     width: 70%;
     margin-left: 15%;
-}
-
-#deliveryAddressTable td {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.quantityColumn {
-    text-align: center;
-    width: 62px;
-}
-
-.confirmationPriceColumn {
-    width: 90px;
-    font-weight: normal;
-}
-
-#deliverySurchargeCellLeft {
-    text-align: right;
-    padding: 0;
-}
-
-#deliverySurchargeCellRight { padding: 0 20px }
-
-#totalCellLeft {
-    text-align: right;
-    padding: 0;
-}
-
-#totalCellRight { padding: 0 20px }
-
-#dateProcessedRow { padding: 2px 0 10px 20px }
-
-
-/* admin styles */
-#adminLogo {
-    float:left;
-    margin-left: 30px;
-    margin-top: -20px;
-}
-
-#loginBox {
-    width: 300px;
-    margin: 0 auto;
-    border: solid 1px #f5eabe;
-    background-color: #f5eabe;
-    border-radius: 4px;
-}
-
-#adminMenu {
-    float: left;
-    width: 180px;
-    margin: 25px 5px 0 30px;
-    border: solid 1px #f5eabe;
-    background-color: #f5eabe;
-    border-radius: 4px;
-}
-
-#adminMenu p { margin-left: 15px }
-
-#adminTable {
-    width: 580px;
-    float: left;
-    background-color: #edf8f7;
-}
-
-.alignLeft { text-align: left }
-
-.selectedRow {
-    background-color: #c3e3e0;
-    cursor: pointer;
-}
-
-.noDecoration { text-decoration: none }
-
-.rigidWidth { width:200px }
-
-.embedded {
-    margin: 0;
-    border: none;
+    text-align: left;
+    height: 200px;
 }

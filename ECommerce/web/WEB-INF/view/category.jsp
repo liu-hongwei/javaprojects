@@ -23,7 +23,7 @@
     <c:forEach var="category" items="${categories}">
 
         <c:choose>
-            <c:when test="${category.id == pageContext.request.queryString}">
+            <c:when test="${category.name == selectedCategory.name}">
                 <div class="categoryButton" id="selectedCategory">
                     <span class="categoryText">
                         ${category.name}
@@ -31,10 +31,10 @@
                 </div>
             </c:when>
             <c:otherwise>
-                <a href="category?${category.id}" class="categoryButton">
-                    <div class="categoryText">
+                <a href="<c:url value='category?${category.id}'/>" class="categoryButton">
+                    <span class="categoryText">
                         ${category.name}
-                    </div>
+                    </span>
                 </a>
             </c:otherwise>
         </c:choose>
@@ -65,7 +65,7 @@
                     &euro; ${product.price} / unit
                 </td>
                 <td>
-                    <form action="addToCart" method="post">
+                    <form action="<c:url value='addToCart'/>" method="post">
                         <input type="hidden"
                                name="productId"
                                value="${product.id}">
